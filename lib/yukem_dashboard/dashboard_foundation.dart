@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 import 'package:yukem_dashboard/yukem_dashboard/screens/dashboard/tela_vendas.dart';
+import 'package:yukem_dashboard/yukem_dashboard/screens/tela_noticias.dart';
 import 'package:yukem_dashboard/yukem_dashboard/screens/utilidades/tela_configuracoes.dart';
 import 'package:yukem_dashboard/yukem_dashboard/screens/vendedor/tela_comissao.dart';
 import 'package:yukem_dashboard/yukem_dashboard/screens/vendedor/tela_critica.dart';
@@ -41,7 +42,8 @@ class _DashboardState extends State<Dashboard> {
       TelaCritica(),
       TelaMetasVendedor(),
       TelaFaturamento(),
-      TelaConfiguracoes()
+      TelaConfiguracoes(),
+      TelaNoticias()
     ];
 
     return Provider(

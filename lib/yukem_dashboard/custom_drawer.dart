@@ -85,7 +85,7 @@ class CustomDrawerState extends State<CustomDrawer> {
               DrawerTile(
                 iconData: Icons.monetization_on_outlined,
                 title: 'Vendas',
-                page: i++,
+                page: 0,
               ),
               const DrawerTile(
                 iconData: CupertinoIcons.cube_box,
@@ -113,22 +113,22 @@ class CustomDrawerState extends State<CustomDrawer> {
               DrawerTile(
                 iconData: Icons.monetization_on_outlined,
                 title: 'Comissão',
-                page: i++,
+                page: 1,
               ),
               DrawerTile(
                 iconData: CupertinoIcons.cube_box,
                 title: 'Crítica',
-                page: i++,
+                page: 2,
               ),
               DrawerTile(
                 iconData: Icons.show_chart,
                 title: 'Metas',
-                page: i++,
+                page: 3,
               ),
               DrawerTile(
                 iconData: Icons.monetization_on_outlined,
                 title: 'Faturamento',
-                page: i++,
+                page: 4,
               ),
             ],
           ),
@@ -142,14 +142,21 @@ class CustomDrawerState extends State<CustomDrawer> {
               DrawerTile(
                 iconData: Icons.monetization_on_outlined,
                 title: 'Produtos',
-                page: i++,
+                page: 0,
               ),
               DrawerTile(
                 iconData: Icons.show_chart,
                 title: 'Metas',
-                page: i++,
+                page: 0,
               ),
             ],
+          ),
+
+
+          DrawerTile(
+            iconData: Icons.newspaper,
+            title: 'Noticias',
+            page: 6,
           ),
 
           // const DrawerExpansionTile(
@@ -174,13 +181,13 @@ class CustomDrawerState extends State<CustomDrawer> {
           DrawerTile(
             iconData: Icons.settings,
             title: 'Configurações',
-            page: i++,
+            page: 7,
           ),
           Divider(color: Colors.grey[800]),
           DrawerTile(
             iconData: Icons.logout,
             title: 'Sair',
-            page: i++,
+            page: 999,
             onPressed: () => Application.logout(context),
           ),
         ],
