@@ -13,9 +13,7 @@ class TelaPlaceholder extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       drawer: CustomDrawer(
-        changeState: (callback) {
-          
-        },
+        changeState: (callback) {},
       ),
     body: Text("Placeholder"),
     );

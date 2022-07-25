@@ -78,66 +78,12 @@ class CustomDrawerState extends State<CustomDrawer> {
           // ),
 
 
-           DrawerExpansionTile(
-            iconData: CupertinoIcons.chart_bar_circle,
-            title: 'Dashboard',
-            id: 0,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Vendas',
-                page: 0,
-              ),
-              const DrawerTile(
-                iconData: CupertinoIcons.cube_box,
-                title: 'Contas',
-                page: 0,
-              ),
-              const DrawerTile(
-                iconData: Icons.show_chart,
-                title: 'Vendedores',
-                page: 0,
-              ),
-              const DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Projeções',
-                page: 0,
-              ),
-            ],
-          ),
+         
 
-          DrawerExpansionTile(
-            iconData: CupertinoIcons.person_alt,
-            title: 'Vendedor',
-            id: 1,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Comissão',
-                page: 1,
-              ),
-              DrawerTile(
-                iconData: CupertinoIcons.cube_box,
-                title: 'Crítica',
-                page: 2,
-              ),
-              DrawerTile(
-                iconData: Icons.show_chart,
-                title: 'Metas',
-                page: 3,
-              ),
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Faturamento',
-                page: 4,
-              ),
-            ],
-          ),
+    
 
 
-          DrawerExpansionTile(
+          /* DrawerExpansionTile(
             iconData: CupertinoIcons.building_2_fill,
             title: 'Operador',
             id: 2,
@@ -154,15 +100,11 @@ class CustomDrawerState extends State<CustomDrawer> {
                 page: 0,
               ),
             ],
-          ),
+          ), */
 
 
 
-          DrawerTile(
-            iconData: Icons.newspaper,
-            title: 'Noticias',
-            page: 6,
-          ),
+       
 
           // const DrawerExpansionTile(
           //   iconData: Icons.add_chart,

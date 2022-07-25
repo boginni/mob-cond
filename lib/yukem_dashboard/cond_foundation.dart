@@ -7,7 +7,7 @@ import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 
 import 'package:yukem_dashboard/yukem_dashboard/screens/placeholder.dart';
 
-import 'package:yukem_dashboard/yukem_dashboard/screens/tela_noticias.dart';
+
 
 
 
