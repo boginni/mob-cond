@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_import
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:yukem_dashboard/yukem_dashboard/custom_drawer.dart';
@@ -17,7 +19,7 @@ class _TelaNoticiasState extends State<TelaNoticias> {
   void initState() {
     super.initState();
     carregando = true;
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
 
 
       getMensagens().then((value) {
@@ -59,6 +61,7 @@ class _TelaNoticiasState extends State<TelaNoticias> {
                 child: Padding(padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 64),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
                   CircularProgressIndicator(),
                   Text('Carregando')

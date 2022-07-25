@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:yukem_dashboard/yukem_dashboard/app_foundation.dart';
@@ -30,6 +32,7 @@ class _TelaLoginState extends State<TelaLogin> {
         leading: InkWell(
           child: const Icon(Icons.settings),
           onTap: () {
+            // ignore: todo
             // TODO: IMPLEMENTAR CONFIGURAÇÕES
           },
         ),

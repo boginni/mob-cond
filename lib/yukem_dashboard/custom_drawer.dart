@@ -1,4 +1,4 @@
-// ignore_for_file: dead_code
+// ignore_for_file: dead_code, prefer_const_constructors
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,13 +29,13 @@ class CustomDrawer extends StatefulWidget {
 class CustomDrawerState extends State<CustomDrawer> {
   @override
   void initState() {
-    // TODO: implement initState
+   
     super.initState();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
+   
     super.dispose();
   }
 
@@ -76,14 +76,13 @@ class CustomDrawerState extends State<CustomDrawer> {
           //   title: 'TESTE',
           //   page: i++,
           // ),
-<<<<<<< HEAD
-    
-=======
+
 
            DrawerExpansionTile(
             iconData: CupertinoIcons.chart_bar_circle,
             title: 'Dashboard',
             id: 0,
+            // ignore: prefer_const_literals_to_create_immutables
             children: [
               DrawerTile(
                 iconData: Icons.monetization_on_outlined,
@@ -112,6 +111,7 @@ class CustomDrawerState extends State<CustomDrawer> {
             iconData: CupertinoIcons.person_alt,
             title: 'Vendedor',
             id: 1,
+            // ignore: prefer_const_literals_to_create_immutables
             children: [
               DrawerTile(
                 iconData: Icons.monetization_on_outlined,
@@ -141,6 +141,7 @@ class CustomDrawerState extends State<CustomDrawer> {
             iconData: CupertinoIcons.building_2_fill,
             title: 'Operador',
             id: 2,
+            // ignore: prefer_const_literals_to_create_immutables
             children: [
               DrawerTile(
                 iconData: Icons.monetization_on_outlined,
@@ -154,7 +155,7 @@ class CustomDrawerState extends State<CustomDrawer> {
               ),
             ],
           ),
->>>>>>> 6b333e0f7288cf805e99245084a57ef8db1f1ff0
+
 
 
           DrawerTile(
@@ -183,15 +184,12 @@ class CustomDrawerState extends State<CustomDrawer> {
 
           Divider(color: Colors.grey[800]),
           DrawerTile(
-<<<<<<< HEAD
+
             iconData: Icons.home,
             title: 'Placeholder',
             page: i++,
-=======
-            iconData: Icons.settings,
-            title: 'Configurações',
-            page: 7,
->>>>>>> 6b333e0f7288cf805e99245084a57ef8db1f1ff0
+
+
           ),
           Divider(color: Colors.grey[800]),
           DrawerTile(

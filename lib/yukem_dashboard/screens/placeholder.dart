@@ -1,4 +1,4 @@
-// ignore_for_file: implementation_imports
+// ignore_for_file: implementation_imports, unnecessary_import, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
