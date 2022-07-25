@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../sdk/screens/tela_login.dart';
-import 'dashboard_foundation.dart';
+import 'cond_foundation.dart';
 
 class Application extends StatefulWidget {
   const Application({Key? key}) : super(key: key);
@@ -61,7 +61,7 @@ class _ApplicationState extends State<Application> {
                   );
                 },
               )
-            : const Dashboard(),
+            : const Cond(),
       ),
     );
   }

@@ -2,21 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
-import 'package:yukem_dashboard/yukem_dashboard/screens/dashboard/tela_vendas.dart';
-import 'package:yukem_dashboard/yukem_dashboard/screens/utilidades/tela_configuracoes.dart';
-import 'package:yukem_dashboard/yukem_dashboard/screens/vendedor/tela_comissao.dart';
-import 'package:yukem_dashboard/yukem_dashboard/screens/vendedor/tela_critica.dart';
-import 'package:yukem_dashboard/yukem_dashboard/screens/vendedor/tela_faturamento.dart';
-import 'package:yukem_dashboard/yukem_dashboard/screens/vendedor/tela_metas_vendedor.dart';
+import 'package:yukem_dashboard/yukem_dashboard/screens/placeholder.dart';
 
-class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
+class Cond extends StatefulWidget {
+  const Cond({Key? key}) : super(key: key);
 
   @override
-  State<Dashboard> createState() => _DashboardState();
+  State<Cond> createState() => _CondState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _CondState extends State<Cond> {
   late final PageManager pageManager;
 
   @override
@@ -36,12 +31,9 @@ class _DashboardState extends State<Dashboard> {
     }
 
     const pages = <Widget>[
-      TelaVendas(),
-      TelaComissao(),
-      TelaCritica(),
-      TelaMetasVendedor(),
-      TelaFaturamento(),
-      TelaConfiguracoes()
+      
+      TelaPlaceholder(),
+
     ];
 
     return Provider(

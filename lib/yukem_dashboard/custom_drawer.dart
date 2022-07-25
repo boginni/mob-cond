@@ -76,81 +76,7 @@ class CustomDrawerState extends State<CustomDrawer> {
           //   title: 'TESTE',
           //   page: i++,
           // ),
-
-           DrawerExpansionTile(
-            iconData: CupertinoIcons.chart_bar_circle,
-            title: 'Dashboard',
-            id: 0,
-            children: [
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Vendas',
-                page: i++,
-              ),
-              const DrawerTile(
-                iconData: CupertinoIcons.cube_box,
-                title: 'Contas',
-                page: 0,
-              ),
-              const DrawerTile(
-                iconData: Icons.show_chart,
-                title: 'Vendedores',
-                page: 0,
-              ),
-              const DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Projeções',
-                page: 0,
-              ),
-            ],
-          ),
-
-          DrawerExpansionTile(
-            iconData: CupertinoIcons.person_alt,
-            title: 'Vendedor',
-            id: 1,
-            children: [
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Comissão',
-                page: i++,
-              ),
-              DrawerTile(
-                iconData: CupertinoIcons.cube_box,
-                title: 'Crítica',
-                page: i++,
-              ),
-              DrawerTile(
-                iconData: Icons.show_chart,
-                title: 'Metas',
-                page: i++,
-              ),
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Faturamento',
-                page: i++,
-              ),
-            ],
-          ),
-
-
-          DrawerExpansionTile(
-            iconData: CupertinoIcons.building_2_fill,
-            title: 'Operador',
-            id: 2,
-            children: [
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Produtos',
-                page: i++,
-              ),
-              DrawerTile(
-                iconData: Icons.show_chart,
-                title: 'Metas',
-                page: i++,
-              ),
-            ],
-          ),
+    
 
           // const DrawerExpansionTile(
           //   iconData: Icons.add_chart,
@@ -172,8 +98,8 @@ class CustomDrawerState extends State<CustomDrawer> {
 
           Divider(color: Colors.grey[800]),
           DrawerTile(
-            iconData: Icons.settings,
-            title: 'Configurações',
+            iconData: Icons.home,
+            title: 'Placeholder',
             page: i++,
           ),
           Divider(color: Colors.grey[800]),
