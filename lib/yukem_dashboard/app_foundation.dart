@@ -1,7 +1,8 @@
-// ignore_for_file: unnecessary_import
+// ignore_for_file: unnecessary_import, unused_import
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:yukem_dashboard/yukem_dashboard/screens/login/login.dart';
 
 import '../sdk/screens/tela_login.dart';
 import 'cond_foundation.dart';
@@ -54,7 +55,7 @@ class _ApplicationState extends State<Application> {
       key: mainApplicationKey,
       child: MaterialApp(
         home: onLogin
-            ? TelaLogin(
+            ? Login(
                 subimit: () {
                   setState(
                     () {

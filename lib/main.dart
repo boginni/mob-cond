@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 import 'yukem_dashboard/app_foundation.dart';
@@ -8,5 +10,4 @@ void main() {
   // debugPrintStack();
   runApp(const Application());
   // runApp(const Test());
-
 }
