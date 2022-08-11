@@ -19,6 +19,15 @@ class Application extends StatefulWidget {
       state.logout();
     }
   }
+
+  static Future navigate(context, Widget tela) async {
+    return Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => tela,
+      ),
+    );
+  }
 }
 
 class _ApplicationState extends State<Application> {
