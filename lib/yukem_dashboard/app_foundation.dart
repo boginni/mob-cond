@@ -44,7 +44,7 @@ class _ApplicationState extends State<Application> {
   @override
   void initState() {
     super.initState();
-    onLogin = false;
+    onLogin = true;
   }
 
   @override
