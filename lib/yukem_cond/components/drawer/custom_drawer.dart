@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'app_foundation.dart';
+import '../../app_foundation.dart';
 import 'drawer_tile.dart';
 
 int curId = 0;

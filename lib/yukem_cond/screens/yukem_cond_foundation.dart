@@ -1,9 +1,8 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/placeholder.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/sistema/placeholder.dart';
 
 
 
@@ -36,11 +35,7 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
     }
 
     const pages = <Widget>[
-
-      
       TelaPlaceholder(),
-
-
     ];
 
     return Provider(

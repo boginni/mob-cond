@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:yukem_dashboard/yukem_cond/yukem_cond_foundation.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/yukem_cond_foundation.dart';
 
 import 'screens/login/tela_login.dart';
 

@@ -1,6 +1,5 @@
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'container_new_user_cadastro.dart';
@@ -16,7 +15,7 @@ class TelaCadastro extends StatefulWidget {
 }
 
 class _TelaCadastroState extends State<TelaCadastro> {
-  
+
   final steps = [
     const ContainerUserAmbiente(),
     const ContainerUserEmail(),

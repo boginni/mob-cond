@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-import '../custom_drawer.dart';
+import '../../components/drawer/custom_drawer.dart';
 
 class TelaPlaceholder extends StatelessWidget {
   const TelaPlaceholder({Key? key}) : super(key: key);
@@ -14,7 +12,7 @@ class TelaPlaceholder extends StatelessWidget {
       drawer: CustomDrawer(
         changeState: (callback) {},
       ),
-      body: Text("Placeholder"),
+      body: const Text("Placeholder"),
     );
   }
 }

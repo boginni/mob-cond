@@ -47,7 +47,7 @@ class ContainerUserAmbiente extends StatelessWidget {
             child: RaisedButton(
               child: const Text(
                 "VALIDAR AMBIENTE",
-                style: const TextStyle(
+                style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
