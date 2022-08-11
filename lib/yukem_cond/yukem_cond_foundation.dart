@@ -1,24 +1,22 @@
-// ignore_for_file: unused_import, unnecessary_import, unused_element
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
-
-import 'package:yukem_dashboard/yukem_dashboard/screens/placeholder.dart';
-
+import 'package:yukem_dashboard/yukem_cond/screens/placeholder.dart';
 
 
 
 
-class Cond extends StatefulWidget {
-  const Cond({Key? key}) : super(key: key);
+
+class YukemCondFoundation extends StatefulWidget {
+  const YukemCondFoundation({Key? key}) : super(key: key);
 
   @override
-  State<Cond> createState() => _CondState();
+  State<YukemCondFoundation> createState() => _YukemCondFoundationState();
 }
 
-class _CondState extends State<Cond> {
+class _YukemCondFoundationState extends State<YukemCondFoundation> {
   late final PageManager pageManager;
 
   @override

@@ -1,9 +1,7 @@
-// ignore_for_file: unnecessary_import, unused_import
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:yukem_dashboard/yukem_cond/yukem_cond_foundation.dart';
 
-import 'cond_foundation.dart';
 import 'screens/login/tela_login.dart';
 
 class Application extends StatefulWidget {
@@ -62,7 +60,7 @@ class _ApplicationState extends State<Application> {
                   );
                 },
               )
-            : const Cond(),
+            : const YukemCondFoundation(),
       ),
     );
   }

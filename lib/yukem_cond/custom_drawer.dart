@@ -1,5 +1,3 @@
-// ignore_for_file: dead_code, prefer_const_constructors, unnecessary_import
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -57,11 +55,11 @@ class CustomDrawerState extends State<CustomDrawer> {
                     height: 20,
                   ),
                   Text(
-                    'Yukem Vendas',
+                    'Yukem Cond',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     textAlign: TextAlign.left,
                   ),
-                  Text('Vendedor',
+                  Text('Uusário',
                       style: TextStyle(fontSize: 14),
                       textAlign: TextAlign.left),
                   Text(Application.versao,
@@ -71,59 +69,6 @@ class CustomDrawerState extends State<CustomDrawer> {
               ),
             ),
           if (logo) Divider(color: Colors.grey[800]),
-          // DrawerTile(
-          //   iconData: Icons.home,
-          //   title: 'TESTE',
-          //   page: i++,
-          // ),
-
-          Text('Test Button'),
-          ElevatedButton(
-            onPressed: () {
-              setState(() {
-                txt = DateTime.now().toString();
-              });
-            },
-            child: Text(txt),
-          ),
-
-          /* DrawerExpansionTile(
-            iconData: CupertinoIcons.building_2_fill,
-            title: 'Operador',
-            id: 2,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              DrawerTile(
-                iconData: Icons.monetization_on_outlined,
-                title: 'Produtos',
-                page: 0,
-              ),
-              DrawerTile(
-                iconData: Icons.show_chart,
-                title: 'Metas',
-                page: 0,
-              ),
-            ],
-          ), */
-
-          // const DrawerExpansionTile(
-          //   iconData: Icons.add_chart,
-          //   title: 'Gráficos',
-          //   id: 1,
-          //   children: [
-          //     DrawerTile(
-          //       iconData: Icons.monetization_on_outlined,
-          //       title: 'Vendas',
-          //       page: 0,
-          //     ),
-          //     DrawerTile(
-          //       iconData: CupertinoIcons.cube_box,
-          //       title: 'Contas',
-          //       page: 0,
-          //     ),
-          //   ],
-          // ),
-
           Divider(color: Colors.grey[800]),
           DrawerTile(
             iconData: Icons.home,
