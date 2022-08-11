@@ -2,10 +2,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:yukem_dashboard/yukem_dashboard/screens/login/login.dart';
 
-import '../sdk/screens/tela_login.dart';
 import 'cond_foundation.dart';
+import 'screens/login/tela_login.dart';
 
 class Application extends StatefulWidget {
   const Application({Key? key}) : super(key: key);
@@ -44,7 +43,6 @@ class _ApplicationState extends State<Application> {
 
   @override
   void initState() {
-    
     super.initState();
     onLogin = false;
   }
@@ -55,7 +53,7 @@ class _ApplicationState extends State<Application> {
       key: mainApplicationKey,
       child: MaterialApp(
         home: onLogin
-            ? Login(
+            ? TelaLogin(
                 subimit: () {
                   setState(
                     () {

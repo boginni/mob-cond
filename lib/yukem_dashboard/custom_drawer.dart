@@ -29,15 +29,15 @@ class CustomDrawer extends StatefulWidget {
 class CustomDrawerState extends State<CustomDrawer> {
   @override
   void initState() {
-   
     super.initState();
   }
 
   @override
   void dispose() {
-   
     super.dispose();
   }
+
+  String txt = '';
 
   @override
   Widget build(BuildContext context) {
@@ -77,11 +77,15 @@ class CustomDrawerState extends State<CustomDrawer> {
           //   page: i++,
           // ),
 
-
-         
-
-    
-
+          Text('Test Button'),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                txt = DateTime.now().toString();
+              });
+            },
+            child: Text(txt),
+          ),
 
           /* DrawerExpansionTile(
             iconData: CupertinoIcons.building_2_fill,
@@ -101,10 +105,6 @@ class CustomDrawerState extends State<CustomDrawer> {
               ),
             ],
           ), */
-
-
-
-       
 
           // const DrawerExpansionTile(
           //   iconData: Icons.add_chart,
@@ -126,12 +126,9 @@ class CustomDrawerState extends State<CustomDrawer> {
 
           Divider(color: Colors.grey[800]),
           DrawerTile(
-
             iconData: Icons.home,
             title: 'Placeholder',
             page: i++,
-
-
           ),
           Divider(color: Colors.grey[800]),
           DrawerTile(
