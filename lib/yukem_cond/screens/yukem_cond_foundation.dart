@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/sistema/placeholder.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/tela_principal.dart';
+
+import 'tela_votacao_online/tela_votacao_aberta.dart';
+import 'tela_votacao_online/tela_votacao_fechada.dart';
+import 'tela_votacao_online/tela_votacao_online.dart';
 
 
 
@@ -35,7 +40,11 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
     }
 
     const pages = <Widget>[
+      TelaPrincipal(),
       TelaPlaceholder(),
+      TelaVotacaoOnline(),
+      TelaVotacaoAberta(),
+      TelaVotacaoFechada(),
     ];
 
     return Provider(
