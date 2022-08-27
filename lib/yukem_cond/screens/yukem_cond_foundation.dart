@@ -39,11 +39,7 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
       TelaPrincipal(), //0
       TelaPlaceholder(), //1
       TelaVotacaoOnline(), //2
-      TelaVotacaoAberta(), //3
-      TelaVotacaoFechada(), //4
-      TelaNoticia(), //5
-      // TelaListaNoticias(), //
-      /* TelaComentarios(), */ //
+      TelaNoticia(), //3
     ];
 
     return Provider(

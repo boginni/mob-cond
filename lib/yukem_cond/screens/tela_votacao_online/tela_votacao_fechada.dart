@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+
 import '../../components/drawer/custom_drawer.dart';
-/* import 'package:percent_indicator/percent_indicator.dart'; */
+import 'moddels/votacao.dart';
 
 class TelaVotacaoFechada extends StatefulWidget {
-  const TelaVotacaoFechada({Key? key}) : super(key: key);
+  const TelaVotacaoFechada({Key? key, required this.item}) : super(key: key);
+
+  final Votacao item;
 
   @override
   _TelaVotacaoFechadaState createState() => _TelaVotacaoFechadaState();
@@ -31,9 +34,9 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
               ),
             ),
           ), */
-          title: const Text("Nome"),
+          title: const Text("Votação Fechada"),
         ),
-        drawer: CustomDrawer(changeState: (cb) {}),
+        // drawer: CustomDrawer(changeState: (cb) {}),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -47,14 +50,14 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                     height: 15,
                   ),
                   Row(
-                    children: const [
-                      Text(
+                    children:  [
+                      const Text(
                         "Criado por: ",
                         style: TextStyle(color: Colors.white),
                       ),
                       Text(
-                        "Administrador",
-                        style: TextStyle(
+                        widget.item.autor,
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600),
                       ),
                     ],
@@ -63,23 +66,23 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                     height: 10,
                   ),
                   Row(
-                    children: const [
-                      Text(
+                    children:  [
+                      const Text(
                         "De: ",
                         style: TextStyle(color: Colors.white),
                       ),
                       Text(
-                        "20/08/2022 19:00",
-                        style: TextStyle(
+                        widget.item.abertura ?? '',
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600),
                       ),
-                      Text(
+                      const Text(
                         " Até: ",
                         style: TextStyle(color: Colors.white),
                       ),
                       Text(
-                        "28/08/2022 15:00",
-                        style: TextStyle(
+                        widget.item.encerramento ?? '',
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600),
                       ),
                     ],
@@ -90,11 +93,11 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
             const SizedBox(
               height: 20,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 10),
+             Padding(
+              padding: const EdgeInsets.only(left: 10),
               child: Text(
-                "Quem você Vota para Sindíco?",
-                style: TextStyle(color: Colors.grey, fontSize: 14),
+                widget.item.titulo,
+                style: const TextStyle(color: Colors.grey, fontSize: 14),
               ),
             ),
             const SizedBox(
@@ -113,7 +116,7 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
             const SizedBox(
               height: 20,
             ),
-           /*   Container(
+            /*   Container(
               padding: const EdgeInsets.all(10),
               child: LinearPercentIndicator(
                 animation: true,
@@ -202,15 +205,15 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
-                                  children: const [
-                                    Text(
+                                  children:  [
+                                    const Text(
                                       "Total de Votos: ",
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 15),
                                     ),
                                     Text(
-                                      "10",
-                                      style: TextStyle(
+                                      widget.item.totalVotos.toString(),
+                                      style: const TextStyle(
                                           color: Colors.black,
                                           fontSize: 15,
                                           fontWeight: FontWeight.w600),

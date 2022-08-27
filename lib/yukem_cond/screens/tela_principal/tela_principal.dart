@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:yukem_dashboard/yukem_cond/components/drawer/custom_drawer.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/bottom_bar.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/container_icone_tela.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/components/bottom_bar.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/tiles/container_icone_tela.dart';
 
 import '../../../sdk/utility/page_manager.dart';
 import '../../app_foundation.dart';
@@ -83,7 +83,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               icone: Icons.newspaper,
               nome: "Notícias",
               onPressed: () {
-                pg.setPage(5);
+                pg.setPage(3);
               }),
           ContainerIconeTela(
               icone: Icons.post_add,

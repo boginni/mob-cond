@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../../sdk/models/votacao/user.dart';
 import '../../components/drawer/custom_drawer.dart';
+import 'moddels/votacao.dart';
 
 class TelaVotacaoAberta extends StatefulWidget {
-  const TelaVotacaoAberta({Key? key}) : super(key: key);
+  const TelaVotacaoAberta({Key? key, required this.item}) : super(key: key);
+
+  final Votacao item;
 
   @override
   _TelaVotacaoAbertaState createState() => _TelaVotacaoAbertaState();
@@ -44,9 +47,9 @@ class _TelaVotacaoAbertaState extends State<TelaVotacaoAberta> {
             ),
           ),
         ) */
-        title: const Text("Nome"),
+        title: const Text("Votação Aberta"),
       ),
-      drawer: CustomDrawer(changeState: (cb) {}),
+      // drawer: CustomDrawer(changeState: (cb) {}),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

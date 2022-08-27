@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_noticias/moddels/noticia.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_noticias/tiles/tile_noticia.dart';
 
+import '../../components/barra_pesquisa.dart';
 import '../../components/drawer/custom_drawer.dart';
-import 'components/barra_pesquisa.dart';
 
 class TelaNoticia extends StatefulWidget {
   const TelaNoticia({Key? key}) : super(key: key);
