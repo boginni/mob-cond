@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 
-import '../../../sdk/utility/page_manager.dart';
 import '../../components/drawer/custom_drawer.dart';
-import 'container_status_tela.dart';
+import 'container_lista_noticias_tela.dart';
 
-class TelaVotacaoOnline extends StatefulWidget {
-  const TelaVotacaoOnline({Key? key}) : super(key: key);
+class TelaListaNoticias extends StatefulWidget {
+  const TelaListaNoticias({Key? key}) : super(key: key);
 
   @override
-  _TelaVotacaoOnlineState createState() => _TelaVotacaoOnlineState();
+  State<TelaListaNoticias> createState() => _TelaListaNoticiasState();
 }
 
-const String aberto = "Aberto";
-
-class _TelaVotacaoOnlineState extends State<TelaVotacaoOnline> {
+class _TelaListaNoticiasState extends State<TelaListaNoticias> {
   @override
   Widget build(BuildContext context) {
     final pg = PageManager.of(context);
@@ -63,27 +61,21 @@ class _TelaVotacaoOnlineState extends State<TelaVotacaoOnline> {
             ),
             Expanded(
               flex: 8,
-              child: Padding(
-                padding: const EdgeInsets.all(15),
-                child: ListView(
-                  physics: const AlwaysScrollableScrollPhysics(),
-                  padding: EdgeInsets.zero,
-                  shrinkWrap: true,
-                  children: [
-                    TelaContainerVotacao(
-                      titulo: "Teste",
-                      criadopor: "João",
-                      status: "Aberto",
-                      onPressed: () {
-                        if (aberto == "Abert") {
-                          pg.setPage(3);
-                        } else {
-                          pg.setPage(4);
-                        }
-                      },
-                    ),
-                  ],
-                ),
+              child: ListView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                shrinkWrap: true,
+                children: [
+                  ContainerListaNoticiasTela(
+                    titulo: "Estamos Desenvolvendo o app Yukem Cond",
+                    url: "https://picsum.photos/250?image=9",
+                    qtdlikes: "120",
+                    qtdcomentarios: "52",
+                    notica: () {
+                      pg.setPage(5);
+                    },
+                    comentarios: () {},
+                  ),
+                ],
               ),
             ),
           ],

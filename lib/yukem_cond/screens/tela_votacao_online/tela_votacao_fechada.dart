@@ -113,22 +113,25 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
             const SizedBox(
               height: 20,
             ),
-            /* Container(
-              padding: EdgeInsets.all(10),
+           /*   Container(
+              padding: const EdgeInsets.all(10),
               child: LinearPercentIndicator(
                 animation: true,
                 animationDuration: 1000,
                 lineHeight: 30,
                 percent: 0.3,
                 progressColor: Colors.blue,
-                leading: Text(
-                  "Ana",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600),
+                leading: Container(
+                   padding: const EdgeInsets.all(10),
+                  child: const Text(
+                    "Ana",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
-                center: Text(
+                center: const Text(
                   "30%",
                   style: TextStyle(
                       color: Colors.black,
@@ -138,21 +141,24 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
               ),
             ), 
              Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: LinearPercentIndicator(
                 animation: true,
                 animationDuration: 1000,
                 lineHeight: 30,
                 percent: 0.1,
                 progressColor: Colors.blue,
-                leading: Text(
-                  "Eduardo",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600),
+                leading: Container(
+                   padding: const EdgeInsets.all(10),
+                  child: const Text(
+                    "Eduardo",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
-                center: Text(
+                center: const Text(
                   "10%",
                   style: TextStyle(
                       color: Colors.black,
@@ -160,7 +166,7 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                       fontWeight: FontWeight.w600),
                 ),
               ),
-            ), */
+            ),  */
             const SizedBox(
               height: 20,
             ),
@@ -180,7 +186,7 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                     child: Card(
                       color: Colors.white,
                       child: Container(
-                        padding: EdgeInsets.all(30),
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

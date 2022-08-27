@@ -82,8 +82,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               icone: Icons.newspaper,
               nome: "Notícias",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(6);
               }),
           ContainerIconeTela(
               icone: Icons.post_add,

@@ -137,7 +137,9 @@ class CustomDrawerState extends State<CustomDrawer> {
             ListTile(
               leading: const Icon(Icons.newspaper),
               title: const Text('Notícias'),
-              onTap: () {},
+              onTap: () {
+                pg.setPage(6);
+              },
             ),
             const Divider(
               height: 1,
@@ -279,14 +281,22 @@ Widget oldDrawer(BuildContext context, bool logo) {
           title: 'TelaPrincipal',
           page: i++,
         ),
+        Divider(color: Colors.grey[800]),
         DrawerTile(
           iconData: Icons.home,
           title: 'Placeholder',
           page: i++,
         ),
+        Divider(color: Colors.grey[800]),
         DrawerTile(
           iconData: Icons.how_to_vote_outlined,
           title: 'Votação Online',
+          page: i++,
+        ),
+        Divider(color: Colors.grey[800]),
+        DrawerTile(
+          iconData: Icons.newspaper,
+          title: 'Notícias',
           page: i++,
         ),
         Divider(color: Colors.grey[800]),
