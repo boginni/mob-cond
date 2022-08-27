@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:yukem_dashboard/yukem_cond/components/drawer/custom_drawer.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/bottom_bar.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/container_icone_tela.dart';
 
 import '../../../sdk/utility/page_manager.dart';
@@ -82,7 +83,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               icone: Icons.newspaper,
               nome: "Notícias",
               onPressed: () {
-                pg.setPage(6);
+                pg.setPage(5);
               }),
           ContainerIconeTela(
               icone: Icons.post_add,
@@ -140,122 +141,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
       ),
-      bottomNavigationBar: ClipRRect(
-        child: CupertinoTabBar(
-          height: 70,
-          items: [
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.all(10),
-                child: FlatButton(
-                  padding: const EdgeInsets.symmetric(horizontal: 1),
-                  shape: const CircleBorder(
-                    side: BorderSide.none,
-                  ),
-                  onPressed: () {
-                    /* Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => My())); */
-                  },
-                  child: Column(
-                    children: const <Widget>[
-                      Icon(
-                        Icons.business,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      Text(
-                        "Trocar Cond.",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.all(10),
-                child: FlatButton(
-                  shape: const CircleBorder(
-                    side: BorderSide.none,
-                  ),
-                  onPressed: () {
-                    /* Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => My())); */
-                  },
-                  child: Column(
-                    children: const <Widget>[
-                      Icon(
-                        Icons.help_outline,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      Text(
-                        "Ajuda",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.all(10),
-                child: FlatButton(
-                  shape: const CircleBorder(
-                    side: BorderSide.none,
-                  ),
-                  onPressed: () {
-                    /* Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => My())); */
-                  },
-                  child: Column(
-                    children: const <Widget>[
-                      Icon(
-                        Icons.settings,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      Text(
-                        "Config",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.all(10),
-                child: FlatButton(
-                  shape: const CircleBorder(
-                    side: BorderSide.none,
-                  ),
-                  onPressed: () {
-                    /* Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => My())); */
-                  },
-                  child: Column(
-                    children: const <Widget>[
-                      Icon(
-                        Icons.exit_to_app,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      Text(
-                        "Sair",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      bottomNavigationBar: const BottomBar(),
     );
   }
 }

@@ -138,7 +138,7 @@ class CustomDrawerState extends State<CustomDrawer> {
               leading: const Icon(Icons.newspaper),
               title: const Text('Notícias'),
               onTap: () {
-                pg.setPage(6);
+                pg.setPage(5);
               },
             ),
             const Divider(

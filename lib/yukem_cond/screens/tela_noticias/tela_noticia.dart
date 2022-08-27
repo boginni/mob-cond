@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_noticias/moddels/noticia.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_noticias/tiles/tile_noticia.dart';
+
 import '../../components/drawer/custom_drawer.dart';
-import 'container_noticia_tela.dart';
+import 'components/barra_pesquisa.dart';
 
 class TelaNoticia extends StatefulWidget {
   const TelaNoticia({Key? key}) : super(key: key);
@@ -10,24 +13,44 @@ class TelaNoticia extends StatefulWidget {
 }
 
 class _TelaNoticiaState extends State<TelaNoticia> {
+  List<Noticia> list = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      Noticia.getList().then((value) {
+        setState(() {
+          list = value;
+        });
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text("Nome"),
+        title: const Text("Notícias"),
       ),
-      drawer: CustomDrawer(changeState: (cb) {}),
-      body: ListView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        shrinkWrap: true,
-        scrollDirection: Axis.vertical,
-        children: const [
-          ContainerNoticiaTela(
-            urlnoticia:
-                'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
-            titulonotica: "TITÚLO DA NOTÍCIA",
-            textonoticia:
-                "Este é o texto da notícia Este é o texto da notícia Este é o texto da notícia Este é o texto da notícia Este é o texto da notícia Este é o texto da notícia ",
+      drawer: CustomDrawer(changeState: setState),
+      body: Column(
+        children: [
+          const Expanded(
+            child: BarraPesquisa(),
+          ),
+          Expanded(
+            flex: 8,
+            child: ListView.builder(
+              physics: const AlwaysScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: list.length,
+              itemBuilder: (BuildContext context, int index) {
+                return TileNoticia(item: list[index]);
+              },
+            ),
           ),
         ],
       ),

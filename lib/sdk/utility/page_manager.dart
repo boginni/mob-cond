@@ -13,7 +13,7 @@ class PageManager {
   Future<bool> onWillPop() async {
     if (previousPage()) {
       // return await mostrarCaixaConfirmacao(context, title: 'Deseja Sair do app?');
-      return true;
+      return false;
     }
     return false;
   }
