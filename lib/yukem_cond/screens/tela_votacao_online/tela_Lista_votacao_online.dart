@@ -5,22 +5,22 @@ import 'package:yukem_dashboard/yukem_cond/screens/tela_votacao_online/tiles/til
 
 import '../../components/drawer/custom_drawer.dart';
 
-class TelaVotacaoOnline extends StatefulWidget {
-  const TelaVotacaoOnline({Key? key}) : super(key: key);
+class TelaListaVotacaoOnline extends StatefulWidget {
+  const TelaListaVotacaoOnline({Key? key}) : super(key: key);
 
   @override
-  _TelaVotacaoOnlineState createState() => _TelaVotacaoOnlineState();
+  _TelaListaVotacaoOnlineState createState() => _TelaListaVotacaoOnlineState();
 }
 
 const String aberto = "Aberto";
 
-class _TelaVotacaoOnlineState extends State<TelaVotacaoOnline> {
+class _TelaListaVotacaoOnlineState extends State<TelaListaVotacaoOnline> {
   List<Votacao> list = [];
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Votacao.getList().then((value) {
         setState(() {
           list = value;

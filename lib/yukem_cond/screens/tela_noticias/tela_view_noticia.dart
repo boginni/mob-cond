@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../components/drawer/custom_drawer.dart';
-import 'container_noticia_tela.dart';
 import 'moddels/noticia.dart';
 
 class TelaViewNoticia extends StatefulWidget {
   const TelaViewNoticia({Key? key, required this.item}) : super(key: key);
 
   final Noticia item;
-
 
   @override
   State<TelaViewNoticia> createState() => _TelaViewNoticiaState();
@@ -32,8 +29,8 @@ class _TelaViewNoticiaState extends State<TelaViewNoticia> {
                 children: [
                   Text(
                     widget.item.titulo,
-                    style:
-                    const TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                    style: const TextStyle(
+                        fontSize: 25, fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(
                     height: 20,

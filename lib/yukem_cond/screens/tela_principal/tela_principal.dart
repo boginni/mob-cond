@@ -102,8 +102,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               icone: Icons.search,
               nome: "Achados e Perdidos",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(4);
               }),
           ContainerIconeTela(
               icone: Icons.featured_play_list_outlined,

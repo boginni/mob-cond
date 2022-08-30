@@ -50,7 +50,7 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                     height: 15,
                   ),
                   Row(
-                    children:  [
+                    children: [
                       const Text(
                         "Criado por: ",
                         style: TextStyle(color: Colors.white),
@@ -66,7 +66,7 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                     height: 10,
                   ),
                   Row(
-                    children:  [
+                    children: [
                       const Text(
                         "De: ",
                         style: TextStyle(color: Colors.white),
@@ -93,7 +93,7 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
             const SizedBox(
               height: 20,
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
                 widget.item.titulo,
@@ -205,7 +205,7 @@ class _TelaVotacaoFechadaState extends State<TelaVotacaoFechada> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
-                                  children:  [
+                                  children: [
                                     const Text(
                                       "Total de Votos: ",
                                       style: TextStyle(

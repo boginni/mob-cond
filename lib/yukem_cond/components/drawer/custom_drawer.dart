@@ -171,7 +171,9 @@ class CustomDrawerState extends State<CustomDrawer> {
             ListTile(
               leading: const Icon(Icons.search),
               title: const Text('Achados e Perdidos'),
-              onTap: () {},
+              onTap: () {
+                pg.setPage(4);
+              },
             ),
             const Divider(
               height: 1,
@@ -297,6 +299,12 @@ Widget oldDrawer(BuildContext context, bool logo) {
         DrawerTile(
           iconData: Icons.newspaper,
           title: 'Notícias',
+          page: i++,
+        ),
+        Divider(color: Colors.grey[800]),
+        DrawerTile(
+          iconData: Icons.search,
+          title: 'Achados e Perdidos',
           page: i++,
         ),
         Divider(color: Colors.grey[800]),

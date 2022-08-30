@@ -1,23 +1,15 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-class TelaContainerVotacao extends StatefulWidget {
-  const TelaContainerVotacao(
-      {Key? key,
-      required this.titulo,
-      required this.criadopor,
-      required this.status,
-      required this.onPressed})
-      : super(key: key);
+import '../../../app_foundation.dart';
+import '../moddels/achados_e_perdidos.dart';
+import '../tela_achado.dart';
+import '../tela_perdido.dart';
 
-  final String titulo;
-  final String criadopor;
-  final String status;
-  final Function onPressed;
-  @override
-  State<TelaContainerVotacao> createState() => _TelaContainerVotacaoState();
-}
+class TileAchadosePerdidos extends StatelessWidget {
+  const TileAchadosePerdidos({Key? key, required this.item}) : super(key: key);
 
-class _TelaContainerVotacaoState extends State<TelaContainerVotacao> {
+  final AchadosePerdidos item;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +22,10 @@ class _TelaContainerVotacaoState extends State<TelaContainerVotacao> {
         ],
       ),
       child: InkWell(
-        onTap: () => widget.onPressed(),
+        onTap: () {
+          Application.navigate(context,
+              item.achado ? TelaAchado(item: item) : TelaPerdido(item: item));
+        },
         child: Card(
           color: Colors.white,
           child: Container(
@@ -38,8 +33,9 @@ class _TelaContainerVotacaoState extends State<TelaContainerVotacao> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Image.network(item.imageUrl),
                 Text(
-                  widget.titulo,
+                  item.titulo,
                   style: const TextStyle(
                       fontWeight: FontWeight.w600, fontSize: 15),
                 ),
@@ -64,7 +60,7 @@ class _TelaContainerVotacaoState extends State<TelaContainerVotacao> {
                           style: TextStyle(color: Colors.grey, fontSize: 15),
                         ),
                         Text(
-                          widget.criadopor,
+                          item.autor,
                           style: const TextStyle(
                               color: Colors.grey,
                               fontSize: 15,
@@ -75,11 +71,11 @@ class _TelaContainerVotacaoState extends State<TelaContainerVotacao> {
                     Row(
                       children: [
                         const Text(
-                          "Status: ",
+                          "Situação: ",
                           style: TextStyle(color: Colors.grey, fontSize: 15),
                         ),
                         Text(
-                          widget.status,
+                          item.getSituacao(),
                           style: const TextStyle(
                               color: Colors.grey,
                               fontSize: 15,
@@ -97,4 +93,3 @@ class _TelaContainerVotacaoState extends State<TelaContainerVotacao> {
     );
   }
 }
- */

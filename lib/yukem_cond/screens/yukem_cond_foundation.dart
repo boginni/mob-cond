@@ -4,11 +4,9 @@ import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/sistema/placeholder.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/tela_principal.dart';
 
-import 'tela_noticias/tela_lista_noticias.dart';
+import 'tela_achados_e_perdidos/tela_lista_achados_e_perdidos.dart';
 import 'tela_noticias/tela_noticia.dart';
-import 'tela_votacao_online/tela_votacao_aberta.dart';
-import 'tela_votacao_online/tela_votacao_fechada.dart';
-import 'tela_votacao_online/tela_votacao_online.dart';
+import 'tela_votacao_online/tela_Lista_votacao_online.dart';
 
 class YukemCondFoundation extends StatefulWidget {
   const YukemCondFoundation({Key? key}) : super(key: key);
@@ -38,8 +36,9 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
     const pages = <Widget>[
       TelaPrincipal(), //0
       TelaPlaceholder(), //1
-      TelaVotacaoOnline(), //2
+      TelaListaVotacaoOnline(), //2
       TelaNoticia(), //3
+      TelaListaAchadosePerdidos()//4
     ];
 
     return Provider(

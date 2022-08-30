@@ -36,6 +36,8 @@ dependencies:
   syncfusion_flutter_charts: 20.1.55
 #  syncfusion_flutter_datagrid: ^20.2.39
 #  percent_indicator: ^3.3.0
+flutter_localizations: 
+  sdk: flutter
 dev_dependencies:
   flutter_test:
     sdk: flutter

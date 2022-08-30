@@ -17,9 +17,8 @@ class _TelaNoticiaState extends State<TelaNoticia> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Noticia.getList().then((value) {
         setState(() {
           list = value;

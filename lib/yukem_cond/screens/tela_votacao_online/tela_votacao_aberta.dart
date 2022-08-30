@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../sdk/models/votacao/user.dart';
-import '../../components/drawer/custom_drawer.dart';
+
 import 'moddels/votacao.dart';
 
 class TelaVotacaoAberta extends StatefulWidget {
