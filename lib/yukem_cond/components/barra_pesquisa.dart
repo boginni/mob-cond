@@ -20,7 +20,6 @@ class BarraPesquisa extends StatelessWidget {
         ],
       ),
       child: const TextField(
-        obscureText: true,
         decoration: InputDecoration(
           icon: Icon(
             Icons.search,

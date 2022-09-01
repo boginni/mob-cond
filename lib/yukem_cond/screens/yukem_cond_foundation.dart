@@ -6,6 +6,7 @@ import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/tela_principal
 
 import 'tela_achados_e_perdidos/tela_lista_achados_e_perdidos.dart';
 import 'tela_noticias/tela_noticia.dart';
+import 'tela_pedidos/tela_lista_pedidos.dart';
 import 'tela_votacao_online/tela_Lista_votacao_online.dart';
 
 class YukemCondFoundation extends StatefulWidget {
@@ -38,7 +39,8 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
       TelaPlaceholder(), //1
       TelaListaVotacaoOnline(), //2
       TelaNoticia(), //3
-      TelaListaAchadosePerdidos()//4
+      TelaListaAchadosePerdidos(), //4
+      TelaListaPedidos(), //5
     ];
 
     return Provider(

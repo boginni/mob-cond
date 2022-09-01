@@ -89,8 +89,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               icone: Icons.post_add,
               nome: "Pedidos",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+               pg.setPage(5);
               }),
           ContainerIconeTela(
               icone: Icons.how_to_vote_outlined,
