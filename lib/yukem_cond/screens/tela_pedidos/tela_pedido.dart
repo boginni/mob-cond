@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_achados_e_perdidos/moddels/achados_e_perdidos.dart';
 
-class TelaAchado extends StatefulWidget {
-  const TelaAchado({
+import 'moddels/pedidos.dart';
+
+class TelaPedido extends StatefulWidget {
+  const TelaPedido({
     Key? key,
     required this.item,
   }) : super(key: key);
 
-  final AchadosePerdidos item;
+  final Pedidos item;
   @override
-  State<TelaAchado> createState() => _TelaAchadoState();
+  State<TelaPedido> createState() => _TelaPedidoState();
 }
 
-class _TelaAchadoState extends State<TelaAchado> {
+class _TelaPedidoState extends State<TelaPedido> {
   DateTime date = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text("Achado"),
+        title: const Text("Pedidos"),
       ),
       body: Column(
         children: [
@@ -47,13 +47,39 @@ class _TelaAchadoState extends State<TelaAchado> {
                           ),
                         ],
                       ),
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            const Text("OBJETO ACHADO"),
+                            const Text("DESCRIÇÃO"),
                             Text(widget.item.titulo)
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(13)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey,
+                            blurRadius: 15,
+                          ),
+                        ],
+                      ),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("PARA:"),
+                            Text(widget.item.nomecondomino)
                           ],
                         ),
                       ),
@@ -78,7 +104,7 @@ class _TelaAchadoState extends State<TelaAchado> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text("OBSERVAÇÃO"),
+                            const Text("OBSERVAÇÃO"),
                             Text(widget.item.observacao)
                           ],
                         ),
@@ -114,7 +140,7 @@ class _TelaAchadoState extends State<TelaAchado> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
-                              "Data em que o objeto foi encontrado",
+                              "DATA DA ENTREGA",
                               style: TextStyle(fontSize: 17),
                             ),
                             const SizedBox(
@@ -136,36 +162,12 @@ class _TelaAchadoState extends State<TelaAchado> {
                     const SizedBox(
                       height: 10,
                     ),
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 15,
-                            ),
-                          ],
-                        ),
-                        child: const Center(child: Text("Inserir Anexo")),
-                      ),
-                    )
                   ],
                 ),
               ],
             ),
           ),
         ],
-      ),
-      bottomNavigationBar: TextButton(
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-        child: const Text('Encontrei'),
       ),
     );
   }

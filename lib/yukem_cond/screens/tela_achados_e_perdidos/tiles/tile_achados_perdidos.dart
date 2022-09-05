@@ -5,8 +5,8 @@ import '../moddels/achados_e_perdidos.dart';
 import '../tela_achado.dart';
 import '../tela_perdido.dart';
 
-class TileAchadosePerdidos extends StatelessWidget {
-  const TileAchadosePerdidos({Key? key, required this.item}) : super(key: key);
+class TileAchadosPerdidos extends StatelessWidget {
+  const TileAchadosPerdidos({Key? key, required this.item}) : super(key: key);
 
   final AchadosePerdidos item;
 
@@ -33,7 +33,6 @@ class TileAchadosePerdidos extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.network(item.imageUrl),
                 Text(
                   item.titulo,
                   style: const TextStyle(

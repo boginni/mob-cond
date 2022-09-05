@@ -8,6 +8,7 @@ class TelaPerdido extends StatefulWidget {
   }) : super(key: key);
 
   final AchadosePerdidos item;
+
   @override
   State<TelaPerdido> createState() => _TelaPerdidoState();
 }
@@ -161,32 +162,11 @@ class _TelaPerdidoState extends State<TelaPerdido> {
           ),
         ],
       ),
-      bottomNavigationBar: Row(
-        children: [
-          Expanded(
-            child: Material(
-              color: Colors.blue,
-              child: InkWell(
-                onTap: () {
-                  /* Application.navigate(context, const TelaAchadosePerdidos()); */
-                },
-                child: const SizedBox(
-                  height: kToolbarHeight,
-                  width: double.infinity,
-                  child: Center(
-                    child: Text(
-                      'ENCONTREI',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
+      bottomNavigationBar: TextButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        child: const Text('É meu'),
       ),
     );
   }

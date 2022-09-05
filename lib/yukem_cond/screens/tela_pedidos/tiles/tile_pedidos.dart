@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_pedidos/tela_pedidos.dart';
+import 'package:yukem_dashboard/yukem_cond/style/default_style.dart';
 
 import '../../../app_foundation.dart';
 import '../moddels/pedidos.dart';
+import '../tela_pedido.dart';
 
 class TilePedidos extends StatelessWidget {
   const TilePedidos({Key? key, required this.item}) : super(key: key);
@@ -12,10 +13,10 @@ class TilePedidos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+      padding: DefaultStyle.tilePadding(),
       child: InkWell(
         onTap: () {
-          Application.navigate(context, TelaPedidos(item: item));
+          Application.navigate(context, TelaPedido(item: item));
         },
         child: Container(
           color: Colors.white,
@@ -26,75 +27,67 @@ class TilePedidos extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(
                   color: Colors.grey,
-                  blurRadius: 15,
+                  blurRadius: 5,
                 ),
               ],
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Image.network(item.imageUrl),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
+            child: Padding(
+              padding: DefaultStyle.tilePadding(),
+              child: Column(
+                children: [
+                  Text(
+                    item.titulo,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: 15),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Divider(
+                    height: 1,
+                    thickness: 0.2,
+                    color: Colors.black,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        item.titulo,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 15),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Divider(
-                        height: 1,
-                        thickness: 0.2,
-                        color: Colors.black,
-                      ),
-                      const SizedBox(
-                        height: 10,
+                      Row(
+                        children: [
+                          const Text(
+                            "PARA: ",
+                            style: TextStyle(color: Colors.grey, fontSize: 15),
+                          ),
+                          Text(
+                            item.nomecondomino,
+                            style: const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            children: [
-                              const Text(
-                                "PARA: ",
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 15),
-                              ),
-                              Text(
-                                item.nomecondomino,
-                                style: const TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                            ],
+                          const Text(
+                            "DATA DA ENTREGA: ",
+                            style: TextStyle(color: Colors.grey, fontSize: 15),
                           ),
-                          Row(
-                            children: [
-                              const Text(
-                                "DATA DA ENTREGA: ",
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 15),
-                              ),
-                              Text(
-                                item.data,
-                                style: const TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                            ],
+                          Text(
+                            item.data,
+                            style: const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600),
                           ),
                         ],
                       ),
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

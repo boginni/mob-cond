@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/sistema/placeholder.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_achados_e_perdidos/tela_achados_perdidos.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_pedidos/tela_pedidos.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/tela_principal.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_votacao_online/tela_votacao_online.dart';
 
-import 'tela_achados_e_perdidos/tela_lista_achados_e_perdidos.dart';
 import 'tela_noticias/tela_noticia.dart';
-import 'tela_pedidos/tela_lista_pedidos.dart';
-import 'tela_votacao_online/tela_Lista_votacao_online.dart';
 
 class YukemCondFoundation extends StatefulWidget {
   const YukemCondFoundation({Key? key}) : super(key: key);
@@ -37,10 +37,10 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
     const pages = <Widget>[
       TelaPrincipal(), //0
       TelaPlaceholder(), //1
-      TelaListaVotacaoOnline(), //2
+      TelaVotacaoOnline(), //2
       TelaNoticia(), //3
-      TelaListaAchadosePerdidos(), //4
-      TelaListaPedidos(), //5
+      TelaAchadosPerdidos(), //4
+      TelaPedidos(), //5
     ];
 
     return Provider(
