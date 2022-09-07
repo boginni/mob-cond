@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../../app_foundation.dart';
-import '../moddels/achados_e_perdidos.dart';
+import '../moddels/achados_perdidos.dart';
 import '../tela_achado.dart';
 import '../tela_perdido.dart';
 
 class TileAchadosPerdidos extends StatelessWidget {
   const TileAchadosPerdidos({Key? key, required this.item}) : super(key: key);
 
-  final AchadosePerdidos item;
+  final AchadosPerdidos item;
 
   @override
   Widget build(BuildContext context) {

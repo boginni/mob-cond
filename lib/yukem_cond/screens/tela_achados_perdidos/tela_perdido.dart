@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_achados_e_perdidos/moddels/achados_e_perdidos.dart';
+
+import 'moddels/achados_perdidos.dart';
 
 class TelaPerdido extends StatefulWidget {
   const TelaPerdido({
@@ -7,7 +8,7 @@ class TelaPerdido extends StatefulWidget {
     required this.item,
   }) : super(key: key);
 
-  final AchadosePerdidos item;
+  final AchadosPerdidos item;
 
   @override
   State<TelaPerdido> createState() => _TelaPerdidoState();

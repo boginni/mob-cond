@@ -1,4 +1,4 @@
-class AchadosePerdidos {
+class AchadosPerdidos {
   final bool achado;
   final String titulo;
   final String autor;
@@ -6,7 +6,7 @@ class AchadosePerdidos {
   final String observacao;
 /*   final DateTime data; */
 
-  AchadosePerdidos({
+  AchadosPerdidos({
     /*  required this.data, */
     required this.achado,
     required this.titulo,
@@ -15,9 +15,9 @@ class AchadosePerdidos {
     required this.observacao,
   });
 
-  static Future<List<AchadosePerdidos>> getList() async {
+  static Future<List<AchadosPerdidos>> getList() async {
     return [
-      AchadosePerdidos(
+      AchadosPerdidos(
         achado: true,
         titulo: 'Bola de basquete',
         autor: 'boginni',
@@ -25,14 +25,14 @@ class AchadosePerdidos {
             'https://cdn2.iconfinder.com/data/icons/mobile-ui-vol-2-glyph/32/mobile_interface-18-512.png',
         observacao: 'Bola de Basquete laranja', /* data: DateTime.now()), */
       ),
-      AchadosePerdidos(
+      AchadosPerdidos(
         achado: false,
         titulo: 'Skate',
         autor: 'Anderson',
         imageUrl: 'https://cdn-icons-png.flaticon.com/512/3898/3898134.png',
         observacao: 'Skate na cor verde', /* data: DateTime.now()), */
       ),
-      AchadosePerdidos(
+      AchadosPerdidos(
         achado: false,
         titulo: 'Bicicleta',
         autor: 'Antonio',
