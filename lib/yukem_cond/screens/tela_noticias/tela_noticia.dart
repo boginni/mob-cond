@@ -5,14 +5,14 @@ import 'package:yukem_dashboard/yukem_cond/screens/tela_noticias/tiles/tile_noti
 import '../../components/barra_pesquisa.dart';
 import '../../components/drawer/custom_drawer.dart';
 
-class TelaNoticia extends StatefulWidget {
-  const TelaNoticia({Key? key}) : super(key: key);
+class TelaNoticias extends StatefulWidget {
+  const TelaNoticias({Key? key}) : super(key: key);
 
   @override
-  State<TelaNoticia> createState() => _TelaNoticiaState();
+  State<TelaNoticias> createState() => _TelaNoticiasState();
 }
 
-class _TelaNoticiaState extends State<TelaNoticia> {
+class _TelaNoticiasState extends State<TelaNoticias> {
   List<Noticia> list = [];
 
   @override

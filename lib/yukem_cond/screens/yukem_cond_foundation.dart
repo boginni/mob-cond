@@ -3,8 +3,15 @@ import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/sistema/placeholder.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_achados_e_perdidos/tela_achados_perdidos.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_atividades/tela_atividades.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_confidencial/tela_confidencial.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_documentos/tela_documentos.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_manutencao/tela_manutencao.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_ocorrencia/tela_ocorrencia.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_pedidos/tela_pedidos.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/tela_principal.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_reservas/tela_reservas.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_visitantes/tela_visitantes.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_votacao_online/tela_votacao_online.dart';
 
 import 'tela_noticias/tela_noticia.dart';
@@ -35,12 +42,19 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
     }
 
     const pages = <Widget>[
-      TelaPrincipal(), //0
-      TelaPlaceholder(), //1
-      TelaVotacaoOnline(), //2
-      TelaNoticia(), //3
-      TelaAchadosPerdidos(), //4
-      TelaPedidos(), //5
+      TelaPrincipal(),
+      TelaPlaceholder(),
+      TelaOcorrencias(),
+      TelaVisitantes(),
+      TelaReservas(),
+      TelaNoticias(),
+      TelaPedidos(),
+      TelaVotacaoOnline(),
+      TelaAchadosPerdidos(),
+      TelaDocumentos(),
+      TelaAtividades(),
+      TelaConfidencial(),
+      TelaManutencao()
     ];
 
     return Provider(

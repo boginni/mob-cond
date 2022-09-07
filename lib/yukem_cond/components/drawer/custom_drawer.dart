@@ -75,11 +75,6 @@ class CustomDrawerState extends State<CustomDrawer> {
                 pg.setPage(0);
               },
             ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
-            ),
             ListTile(
               leading: const Icon(Icons.business),
               title: const Text('Placeholder'),
@@ -93,127 +88,88 @@ class CustomDrawerState extends State<CustomDrawer> {
               color: Colors.black,
             ),
             ListTile(
-              leading: const Icon(Icons.business),
-              title: const Text('Trocar / Adicionar Condominio'),
+              leading: const Icon(Icons.door_front_door_outlined),
+              title: const Text('Ocorrências'),
               onTap: () {
-                pg.setPage(0);
+                pg.setPage(2);
               },
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
             ),
             ListTile(
               leading: const Icon(Icons.edit_location_alt_outlined),
               title: const Text('Ocorrências'),
-              onTap: () {},
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
+              onTap: () {
+                pg.setPage(3);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.group_outlined),
               title: const Text('Visitantes'),
-              onTap: () {},
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
+              onTap: () {
+                pg.setPage(4);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.calendar_today),
               title: const Text('Reservas'),
-              onTap: () {},
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
+              onTap: () {
+                pg.setPage(5);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.newspaper),
               title: const Text('Notícias'),
               onTap: () {
-                pg.setPage(3);
+                pg.setPage(6);
               },
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
             ),
             ListTile(
               leading: const Icon(Icons.post_add),
               title: const Text('Pedidos'),
-              onTap: () {},
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
+              onTap: () {
+                pg.setPage(7);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.how_to_vote_outlined),
               title: const Text('Votação Online'),
               onTap: () {
-                pg.setPage(2);
+                pg.setPage(8);
               },
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
             ),
             ListTile(
               leading: const Icon(Icons.search),
               title: const Text('Achados e Perdidos'),
               onTap: () {
-                pg.setPage(4);
+                pg.setPage(9);
               },
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
             ),
             ListTile(
               leading: const Icon(Icons.featured_play_list_outlined),
               title: const Text('Documentos'),
-              onTap: () {},
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
+              onTap: () {
+                pg.setPage(10);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.group_add_outlined),
               title: const Text('Atividades'),
-              onTap: () {},
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
+              onTap: () {
+                pg.setPage(11);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.sim_card_alert_outlined),
               title: const Text('Confidencial'),
-              onTap: () {},
-            ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
+              onTap: () {
+                pg.setPage(12);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.precision_manufacturing_outlined),
               title: const Text('Manutenção'),
-              onTap: () {},
+              onTap: () {
+                pg.setPage(13);
+              },
             ),
             const Divider(
               height: 1,
@@ -225,11 +181,6 @@ class CustomDrawerState extends State<CustomDrawer> {
               title: const Text('Configurações'),
               onTap: () {},
             ),
-            const Divider(
-              height: 1,
-              thickness: 0.2,
-              color: Colors.black,
-            ),
             ListTile(
               leading: const Icon(Icons.whatsapp),
               title: const Text('Suporte'),
@@ -239,6 +190,13 @@ class CustomDrawerState extends State<CustomDrawer> {
               height: 1,
               thickness: 0.2,
               color: Colors.black,
+            ),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Sair'),
+              onTap: () {
+                Application.logout(context);
+              },
             ),
           ],
         ),

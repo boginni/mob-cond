@@ -55,81 +55,73 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               icone: Icons.door_front_door_outlined,
               nome: "Acesso",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(2);
               }),
           ContainerIconeTela(
               icone: Icons.edit_location_alt_outlined,
               nome: "Ocorrências",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(3);
               }),
           ContainerIconeTela(
               icone: Icons.group_outlined,
               nome: "Visitantes",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(4);
               }),
           ContainerIconeTela(
               icone: Icons.calendar_today,
               nome: "Reservas",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(5);
               }),
           ContainerIconeTela(
               icone: Icons.newspaper,
               nome: "Notícias",
               onPressed: () {
-                pg.setPage(3);
+                pg.setPage(6);
               }),
           ContainerIconeTela(
               icone: Icons.post_add,
               nome: "Pedidos",
               onPressed: () {
-               pg.setPage(5);
+                pg.setPage(7);
               }),
           ContainerIconeTela(
               icone: Icons.how_to_vote_outlined,
               nome: "Votação Online",
               onPressed: () {
-                pg.setPage(2);
+                pg.setPage(8);
               }),
           ContainerIconeTela(
               icone: Icons.search,
               nome: "Achados e Perdidos",
               onPressed: () {
-                pg.setPage(4);
+                pg.setPage(9);
               }),
           ContainerIconeTela(
               icone: Icons.featured_play_list_outlined,
               nome: "Documentos",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(10);
               }),
           ContainerIconeTela(
               icone: Icons.group_add_outlined,
               nome: "Atividade",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(11);
               }),
           ContainerIconeTela(
               icone: Icons.sim_card_alert_outlined,
               nome: "Confidencial",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(12);
               }),
           ContainerIconeTela(
               icone: Icons.precision_manufacturing_outlined,
               nome: "Manutenção",
               onPressed: () {
-                /*    Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => My())); */
+                pg.setPage(13);
               }),
           ContainerIconeTela(
               icone: Icons.logout,
