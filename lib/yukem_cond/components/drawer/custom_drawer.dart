@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/sistema/tela_configuracao/tela_configuracao.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/sistema/tela_suporte/tela_suporte.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/sistema/tela_usuario/tela_usuario.dart';
 
 import '../../../sdk/utility/page_manager.dart';
 import '../../app_foundation.dart';
@@ -49,23 +52,31 @@ class CustomDrawerState extends State<CustomDrawer> {
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: [
-            Container(
-              padding: const EdgeInsets.only(top: 40, bottom: 20),
-              child: const ListTile(
-                leading: CircleAvatar(
-                  radius: 35,
-                  backgroundColor: Colors.black,
-                  child: CircleAvatar(
-                    radius: 34,
-                    backgroundColor: Colors.white,
-                    child: Icon(
-                      Icons.person,
-                      size: 35,
-                      color: Colors.black,
+            InkWell(
+              onTap: (){
+                Application.navigate(context, TelaUsuario());
+              },
+              child: Column(
+                children:  const [
+                  Padding(
+                    padding: EdgeInsets.only(top: 40, bottom: 20),
+                    child: CircleAvatar(
+                      radius: 36,
+                      backgroundColor: Colors.black,
+                      child: CircleAvatar(
+                        radius: 36,
+                        backgroundColor: Colors.white,
+                        child: Icon(
+                          Icons.person,
+                          size: 36,
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                title: Text('Menu Lateral'),
+                  Text('Nome do Usuário'),
+                  SizedBox(height: 24,),
+                ],
               ),
             ),
             ListTile(
@@ -73,13 +84,6 @@ class CustomDrawerState extends State<CustomDrawer> {
               title: const Text('Home'),
               onTap: () {
                 pg.setPage(0);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.business),
-              title: const Text('Placeholder'),
-              onTap: () {
-                pg.setPage(1);
               },
             ),
             const Divider(
@@ -179,12 +183,16 @@ class CustomDrawerState extends State<CustomDrawer> {
             ListTile(
               leading: const Icon(Icons.settings),
               title: const Text('Configurações'),
-              onTap: () {},
+              onTap: () {
+                Application.navigate(context, const TelaConfiguracao());
+              },
             ),
             ListTile(
               leading: const Icon(Icons.whatsapp),
               title: const Text('Suporte'),
-              onTap: () {},
+              onTap: () {
+                Application.navigate(context, const TelaSuporte());
+              },
             ),
             const Divider(
               height: 1,

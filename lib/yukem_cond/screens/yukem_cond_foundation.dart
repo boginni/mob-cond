@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/sistema/placeholder.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_acesso/tela_acesso.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_atividades/tela_atividades.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_documentos/tela_documentos.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_manutencao/tela_manutencao.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_ocorrencia/tela_ocorrencia.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_pedidos/tela_pedidos.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_principal/tela_principal.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_reservas/tela_reservas.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_visitantes/tela_visitantes.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_votacao_online/tela_votacao_online.dart';
 
-import 'tela_achados_perdidos/tela_achados_perdidos.dart';
-import 'tela_mercado/tela_mercado.dart';
-import 'tela_noticias/tela_noticia.dart';
+import 'menu_principal/tela_acesso/tela_acesso.dart';
+import 'menu_principal/tela_achados_perdidos/tela_achados_perdidos.dart';
+import 'menu_principal/tela_atividades/tela_atividades.dart';
+import 'menu_principal/tela_documentos/tela_documentos.dart';
+import 'menu_principal/tela_manutencao/tela_manutencao.dart';
+import 'menu_principal/tela_mercado/tela_mercado.dart';
+import 'menu_principal/tela_noticias/tela_noticia.dart';
+import 'menu_principal/tela_ocorrencia/tela_ocorrencia.dart';
+import 'menu_principal/tela_pedidos/tela_pedidos.dart';
+import 'menu_principal/tela_principal/tela_principal.dart';
+import 'menu_principal/tela_reservas/tela_reservas.dart';
+import 'menu_principal/tela_visitantes/tela_visitantes.dart';
+import 'menu_principal/tela_votacao_online/tela_votacao_online.dart';
+import 'sistema/placeholder.dart';
 
 class YukemCondFoundation extends StatefulWidget {
   const YukemCondFoundation({Key? key}) : super(key: key);
