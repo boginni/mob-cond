@@ -112,8 +112,8 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                 pg.setPage(11);
               }),
           ContainerIconeTela(
-              icone: Icons.sim_card_alert_outlined,
-              nome: "Confidencial",
+              icone: Icons.shopping_cart_outlined,
+              nome: "Mercado",
               onPressed: () {
                 pg.setPage(12);
               }),

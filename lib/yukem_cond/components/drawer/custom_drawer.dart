@@ -158,8 +158,8 @@ class CustomDrawerState extends State<CustomDrawer> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.sim_card_alert_outlined),
-              title: const Text('Confidencial'),
+              leading: const Icon(Icons.shopping_cart_outlined),
+              title: const Text('Mercado'),
               onTap: () {
                 pg.setPage(12);
               },

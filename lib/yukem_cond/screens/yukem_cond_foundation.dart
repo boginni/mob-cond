@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/sistema/placeholder.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/tela_acesso/tela_acesso.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_atividades/tela_atividades.dart';
-import 'package:yukem_dashboard/yukem_cond/screens/tela_confidencial/tela_confidencial.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_documentos/tela_documentos.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_manutencao/tela_manutencao.dart';
 import 'package:yukem_dashboard/yukem_cond/screens/tela_ocorrencia/tela_ocorrencia.dart';
@@ -14,6 +14,7 @@ import 'package:yukem_dashboard/yukem_cond/screens/tela_visitantes/tela_visitant
 import 'package:yukem_dashboard/yukem_cond/screens/tela_votacao_online/tela_votacao_online.dart';
 
 import 'tela_achados_perdidos/tela_achados_perdidos.dart';
+import 'tela_mercado/tela_mercado.dart';
 import 'tela_noticias/tela_noticia.dart';
 
 class YukemCondFoundation extends StatefulWidget {
@@ -44,6 +45,7 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
     const pages = <Widget>[
       TelaPrincipal(),
       TelaPlaceholder(),
+      TelaAcesso(),
       TelaOcorrencias(),
       TelaVisitantes(),
       TelaReservas(),
@@ -53,7 +55,7 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
       TelaAchadosPerdidos(),
       TelaDocumentos(),
       TelaAtividades(),
-      TelaConfidencial(),
+      TelaMercado(),
       TelaManutencao()
     ];
 

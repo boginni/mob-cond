@@ -1,19 +1,46 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:yukem_dashboard/yukem_cond/components/tiles/tile_message.dart';
+import 'package:yukem_dashboard/yukem_cond/moddels/message.dart';
 import '../../components/drawer/custom_drawer.dart';
 
-class TelaAcesso extends StatelessWidget {
+class TelaAcesso extends StatefulWidget {
   const TelaAcesso({Key? key}) : super(key: key);
+
+  @override
+  _TelaAcessoState createState() => _TelaAcessoState();
+}
+
+class _TelaAcessoState extends State<TelaAcesso> {
+  List<Message> list = [];
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      Message.getList().then((value) {
+        setState(() {
+          list = value;
+        });
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      drawer: CustomDrawer(
-        changeState: (callback) {},
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        title: const Text("Acesso"),
       ),
-      body: const Text("Acesso"),
+      drawer: CustomDrawer(changeState: setState),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+
+
+          ],
+        ),
+      ),
     );
   }
 }

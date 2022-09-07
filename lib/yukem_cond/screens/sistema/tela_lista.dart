@@ -3,14 +3,14 @@ import 'package:yukem_dashboard/yukem_cond/components/tiles/tile_message.dart';
 import 'package:yukem_dashboard/yukem_cond/moddels/message.dart';
 import '../../components/drawer/custom_drawer.dart';
 
-class TelaVisitantes extends StatefulWidget {
-  const TelaVisitantes({Key? key}) : super(key: key);
+class Tela extends StatefulWidget {
+  const Tela({Key? key}) : super(key: key);
 
   @override
-  _TelaVisitantesState createState() => _TelaVisitantesState();
+  _TelaState createState() => _TelaState();
 }
 
-class _TelaVisitantesState extends State<TelaVisitantes> {
+class _TelaState extends State<Tela> {
   List<Message> list = [];
 
   @override
@@ -30,7 +30,7 @@ class _TelaVisitantesState extends State<TelaVisitantes> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text("Visitantes"),
+        title: const Text(""),
       ),
       drawer: CustomDrawer(changeState: setState),
       body: SingleChildScrollView(
