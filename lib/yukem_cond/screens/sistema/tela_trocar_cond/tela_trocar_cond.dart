@@ -15,7 +15,7 @@ class _TelaTrocarCondState extends State<TelaTrocarCond> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Future.delayed(const Duration(milliseconds: 1250)).then((value) {
         final value = [
           Message('Quinta do bosque', '', ''),

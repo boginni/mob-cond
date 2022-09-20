@@ -17,7 +17,7 @@ class _TelaConfiguracaoState extends State<TelaConfiguracao> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
 
 
       final value = [

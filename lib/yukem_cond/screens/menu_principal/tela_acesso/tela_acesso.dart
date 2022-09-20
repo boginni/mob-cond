@@ -15,7 +15,7 @@ class _TelaAcessoState extends State<TelaAcesso> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Message.getList().then((value) {
         setState(() {
           list = value;
@@ -34,7 +34,7 @@ class _TelaAcessoState extends State<TelaAcesso> {
       drawer: CustomDrawer(changeState: setState),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: const [
 
 
           ],

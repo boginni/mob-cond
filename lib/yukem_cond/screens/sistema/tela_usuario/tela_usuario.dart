@@ -7,7 +7,7 @@ class TelaUsuario extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Usuário'),),
+      appBar: AppBar(title: const Text('Usuário'),),
     );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yukem_dashboard/yukem_cond/components/tiles/tile_message.dart';
 import 'package:yukem_dashboard/yukem_cond/moddels/message.dart';
-import '../../../components/drawer/custom_drawer.dart';
 
 class TelaSuporte extends StatefulWidget {
   const TelaSuporte({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class _TelaSuporteState extends State<TelaSuporte> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
 
       final value = [
         Message('Antonio', 'Whatsapp', '91 9999-9999'),

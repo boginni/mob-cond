@@ -20,7 +20,7 @@ class _TelaVotacaoOnlineState extends State<TelaVotacaoOnline> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Votacao.getList().then((value) {
         setState(() {
           list = value;

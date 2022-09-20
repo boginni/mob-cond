@@ -20,7 +20,7 @@ class _TelaPedidosState extends State<TelaPedidos> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Pedidos.getList().then((value) {
         setState(() {
           list = value;

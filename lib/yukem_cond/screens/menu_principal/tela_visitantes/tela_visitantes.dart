@@ -17,7 +17,7 @@ class _TelaVisitantesState extends State<TelaVisitantes> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Message.getList().then((value) {
         setState(() {
           list = value;

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:yukem_dashboard/yukem_cond/components/tiles/tile_message.dart';
-import 'package:yukem_dashboard/yukem_cond/moddels/message.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/menu_principal/tela_ocorrencia/moddels/ocorrencia.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/menu_principal/tela_ocorrencia/tile/tile_ocorrencia.dart';
 
+import '../../../app_foundation.dart';
 import '../../../components/drawer/custom_drawer.dart';
+import 'tela_nova_ocorrencia.dart';
 
 class TelaOcorrencias extends StatefulWidget {
   const TelaOcorrencias({Key? key}) : super(key: key);
@@ -14,13 +16,13 @@ class TelaOcorrencias extends StatefulWidget {
 const String aberto = "Aberto";
 
 class _TelaOcorrenciasState extends State<TelaOcorrencias> {
-  List<Message> list = [];
+  List<Ocorrencia> list = [];
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
-      Message.getList().then((value) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      Ocorrencia.getList().then((value) {
         setState(() {
           list = value;
         });
@@ -44,11 +46,17 @@ class _TelaOcorrenciasState extends State<TelaOcorrencias> {
               shrinkWrap: true,
               itemCount: list.length,
               itemBuilder: (BuildContext context, int index) {
-                return TileMessage(item: list[index]);
+                return TileOcorrencia(item: list[index]);
               },
             ),
           ],
         ),
+      ),
+       bottomNavigationBar: TextButton(
+        onPressed: () {
+          Application.navigate(context, const TelaNovaOcorrencia());
+        },
+        child: const Text('Nova Venda'),
       ),
     );
   }

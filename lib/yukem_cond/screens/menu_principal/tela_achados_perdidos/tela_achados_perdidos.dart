@@ -23,7 +23,7 @@ class _TelaAchadosPerdidosState extends State<TelaAchadosPerdidos> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       AchadosPerdidos.getList().then((value) {
         setState(() {
           list = value;
