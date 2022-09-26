@@ -36,31 +36,31 @@ class TileOcorrencia extends StatelessWidget {
               padding: DefaultStyle.tilePadding(),
               child: Column(
                 children: [
-                  Text(
-                    item.descricao,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600, fontSize: 15),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Divider(
-                    height: 1,
-                    thickness: 0.2,
-                    color: Colors.black,
-                  ),
-                  const SizedBox(
-                    height: 10,
+                  Column(
+                    children: [
+                      Text(
+                        item.descricao,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w600, fontSize: 15),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Divider(
+                        height: 1,
+                        thickness: 0.2,
+                        color: Colors.black,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                    ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
-                          const Text(
-                            "Criado Por: ",
-                            style: TextStyle(color: Colors.grey, fontSize: 15),
-                          ),
                           Text(
                             item.usuario,
                             style: const TextStyle(
@@ -72,12 +72,8 @@ class TileOcorrencia extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Text(
-                            "Data de Abertura: ",
-                            style: TextStyle(color: Colors.grey, fontSize: 15),
-                          ),
                           Text(
-                            item.dataabertura,
+                            item.dataAbertura,
                             style: const TextStyle(
                                 color: Colors.grey,
                                 fontSize: 15,

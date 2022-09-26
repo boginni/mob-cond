@@ -25,6 +25,8 @@ class PageManager {
   List<int> previousPages = [0];
 
   void setPage(int newPage) {
+    print(newPage);
+
     if (newPage != page) {
       pageController.jumpToPage(newPage);
       previousPages.add(page);

@@ -56,7 +56,7 @@ class _TelaOcorrenciasState extends State<TelaOcorrencias> {
         onPressed: () {
           Application.navigate(context, const TelaNovaOcorrencia());
         },
-        child: const Text('Nova Venda'),
+        child: const Text('Nova Ocorrência'),
       ),
     );
   }

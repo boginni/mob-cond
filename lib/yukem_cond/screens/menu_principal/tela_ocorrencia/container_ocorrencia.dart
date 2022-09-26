@@ -58,7 +58,7 @@ class _ContainerOcorrenciaState extends State<ContainerOcorrencia> {
                         ),
                       ),
                       Text(
-                        "Aberto em: " + widget.item.dataabertura,
+                        "Aberto em: " + widget.item.dataAbertura,
                         style: const TextStyle(
                           fontSize: 15,
                         ),
@@ -118,7 +118,7 @@ class _ContainerOcorrenciaState extends State<ContainerOcorrencia> {
                       ),
                       Text(
                         "Data para finalização: " +
-                            widget.item.dataprevisaofinalizado,
+                            widget.item.dataPrevisaoFinalizado,
                         style: const TextStyle(
                           fontSize: 15,
                         ),
@@ -160,7 +160,7 @@ class _ContainerOcorrenciaState extends State<ContainerOcorrencia> {
                             fontSize: 20, fontWeight: FontWeight.w600),
                       ),
                       Image.network(
-                        widget.item.imageurl,
+                        widget.item.imageUrl,
                         height: 300,
                       )
                     ],

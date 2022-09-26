@@ -19,6 +19,8 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
   Widget build(BuildContext context) {
     final pg = PageManager.of(context);
 
+    int i = 1;
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -47,78 +49,77 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
         children: [
-
           ContainerIconeTela(
               icone: Icons.door_front_door_outlined,
               nome: "Acesso",
               onPressed: () {
-                pg.setPage(2);
+                pg.setPage(1);
               }),
           ContainerIconeTela(
               icone: Icons.edit_location_alt_outlined,
               nome: "Ocorrências",
               onPressed: () {
-                pg.setPage(3);
+                pg.setPage(2);
               }),
           ContainerIconeTela(
               icone: Icons.group_outlined,
               nome: "Visitantes",
               onPressed: () {
-                pg.setPage(4);
+                pg.setPage(3);
               }),
           ContainerIconeTela(
               icone: Icons.calendar_today,
               nome: "Reservas",
               onPressed: () {
-                pg.setPage(5);
+                pg.setPage(4);
               }),
           ContainerIconeTela(
               icone: Icons.newspaper,
               nome: "Notícias",
               onPressed: () {
-                pg.setPage(6);
+                pg.setPage(5);
               }),
           ContainerIconeTela(
               icone: Icons.post_add,
               nome: "Pedidos",
               onPressed: () {
-                pg.setPage(7);
+                pg.setPage(6);
               }),
           ContainerIconeTela(
               icone: Icons.how_to_vote_outlined,
               nome: "Votação Online",
               onPressed: () {
-                pg.setPage(8);
+                pg.setPage(7);
               }),
           ContainerIconeTela(
               icone: Icons.search,
               nome: "Achados e Perdidos",
               onPressed: () {
-                pg.setPage(9);
+                pg.setPage(8);
               }),
           ContainerIconeTela(
               icone: Icons.featured_play_list_outlined,
               nome: "Documentos",
               onPressed: () {
-                pg.setPage(10);
+                pg.setPage(9);
               }),
           ContainerIconeTela(
               icone: Icons.group_add_outlined,
               nome: "Atividade",
               onPressed: () {
-                pg.setPage(11);
+                pg.setPage(10);
               }),
           ContainerIconeTela(
               icone: Icons.shopping_cart_outlined,
               nome: "Mercado",
               onPressed: () {
-                pg.setPage(12);
+                pg.setPage(11);
               }),
           ContainerIconeTela(
               icone: Icons.precision_manufacturing_outlined,
               nome: "Manutenção",
               onPressed: () {
-                pg.setPage(13);
+                pg.setPage(12);
               }),
           ContainerIconeTela(
               icone: Icons.logout,

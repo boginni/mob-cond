@@ -73,20 +73,47 @@ class _ApplicationState extends State<Application> {
             return AppTheme();
           }),
         ],
-        child: MaterialApp(
-          theme: ThemeData(),
-          darkTheme: ThemeData(),
-          home: onLogin
-              ? TelaLogin(
-                  subimit: () {
-                    setState(
-                      () {
-                        onLogin = false;
+        child: Builder(
+          builder: (BuildContext context) {
+            final theme = AppTheme.of(context);
+
+            return MaterialApp(
+              theme: ThemeData(
+                primaryColor: theme.colorTheme.primaryColor,
+                scaffoldBackgroundColor: theme.colorTheme.secondaryColor,
+                visualDensity: VisualDensity.adaptivePlatformDensity,
+                primaryIconTheme:
+                    const IconThemeData(color: Colors.black, opacity: 255),
+                appBarTheme: AppBarTheme(
+                  elevation: 1,
+                  backgroundColor: theme.colorTheme.primaryColor,
+                  // iconTheme: const IconThemeData(color: Colors.black),
+                ),
+                elevatedButtonTheme: ElevatedButtonThemeData(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                  ),
+                ),
+                textButtonTheme: TextButtonThemeData(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                  ),
+                ),
+              ),
+              darkTheme: ThemeData(),
+              home: onLogin
+                  ? TelaLogin(
+                      subimit: () {
+                        setState(
+                          () {
+                            onLogin = false;
+                          },
+                        );
                       },
-                    );
-                  },
-                )
-              : const YukemCondFoundation(),
+                    )
+                  : const YukemCondFoundation(),
+            );
+          },
         ),
       ),
     );

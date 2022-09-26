@@ -15,7 +15,6 @@ import 'menu_principal/tela_principal/tela_principal.dart';
 import 'menu_principal/tela_reservas/tela_reservas.dart';
 import 'menu_principal/tela_visitantes/tela_visitantes.dart';
 import 'menu_principal/tela_votacao_online/tela_votacao_online.dart';
-import 'sistema/placeholder.dart';
 
 class YukemCondFoundation extends StatefulWidget {
   const YukemCondFoundation({Key? key}) : super(key: key);
@@ -44,7 +43,7 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
 
     const pages = <Widget>[
       TelaPrincipal(),
-      TelaPlaceholder(),
+      // TelaPlaceholder(),
       TelaAcesso(),
       TelaOcorrencias(),
       TelaVisitantes(),

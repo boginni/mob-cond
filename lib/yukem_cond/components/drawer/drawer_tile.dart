@@ -4,7 +4,7 @@ import 'package:yukem_dashboard/sdk/utility/page_manager.dart';
 class DrawerTile extends StatelessWidget {
   final IconData iconData;
   final String title;
-  final int page;
+  final int? page;
 
   final Function()? onPressed;
 
@@ -12,7 +12,7 @@ class DrawerTile extends StatelessWidget {
       {Key? key,
       required this.iconData,
       required this.title,
-      required this.page,
+      this.page,
       this.onPressed})
       : super(key: key);
 
@@ -29,7 +29,7 @@ class DrawerTile extends StatelessWidget {
     return InkWell(
       onTap: onPressed ??
           () {
-            pg.setPage(page);
+            pg.setPage(page!);
           },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
