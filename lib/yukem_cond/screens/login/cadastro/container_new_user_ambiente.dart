@@ -44,7 +44,7 @@ class ContainerUserAmbiente extends StatelessWidget {
           child: SizedBox(
             width: 500,
             height: 50,
-            child: RaisedButton(
+            child: TextButton(
               child: const Text(
                 "VALIDAR AMBIENTE",
                 style: TextStyle(
@@ -52,10 +52,10 @@ class ContainerUserAmbiente extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
-              color: Colors.blue,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
+              // color: Colors.blue,
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(12),
+              // ),
               onPressed: (){
 
               },

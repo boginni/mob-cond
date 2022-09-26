@@ -64,6 +64,7 @@ class _YukemCondFoundationState extends State<YukemCondFoundation> {
         return pageManager;
       },
       child: MaterialApp(
+        debugShowCheckedModeBanner: true,
         home: WillPopScope(
           onWillPop: () => pageManager.onWillPop(),
           child: PageView(

@@ -60,10 +60,10 @@ BottomNavigationBarItem _barItem(BuildContext context,
   return BottomNavigationBarItem(
     icon: Padding(
       padding: const EdgeInsets.all(10),
-      child: FlatButton(
-        shape: const CircleBorder(
-          side: BorderSide.none,
-        ),
+      child: TextButton(
+        // shape: const CircleBorder(
+        //   side: BorderSide.none,
+        // ),
         onPressed: onPressed,
         child: Column(
           children: <Widget>[

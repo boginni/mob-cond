@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.boginni.yukem_dashboard">
    <application
-        android:label="yukem_dashboard"
+        android:label="Mob Cond"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

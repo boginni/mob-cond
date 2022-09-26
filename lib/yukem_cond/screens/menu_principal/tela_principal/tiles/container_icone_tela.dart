@@ -27,7 +27,7 @@ class _ContainerIconeTelaState extends State<ContainerIconeTela> {
             spreadRadius: 0,
             offset: Offset(0, 0)),
       ], borderRadius: BorderRadius.circular(13), color: Colors.white),
-      child: FlatButton(
+      child: TextButton(
         onPressed: () => widget.onPressed(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

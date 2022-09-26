@@ -147,18 +147,16 @@ class _TelaLoginState extends State<TelaLogin> {
                 child: SizedBox(
                   width: 500,
                   height: 50,
-                  child: RaisedButton(
+                  child: TextButton(
                     child: const Text(
-                      "ACESSAR",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
+                      "Acessar",
+                      style: ,
                     ),
-                    color: Colors.blue,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                    style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                    // color: Colors.blue,
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(12),
+                    // ),
                     onPressed: () => widget.subimit(),
                   ),
                 ),
