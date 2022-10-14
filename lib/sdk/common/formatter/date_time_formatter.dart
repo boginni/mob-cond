@@ -24,7 +24,8 @@ class DateFormatter {
   static final normalData = DateFormat('dd/MM/yyyy');
   static final normalDataResumido = DateFormat('dd/MM/yy');
   static final normalHoraMinuto = DateFormat('HH:mm');
-  static final noramlDataHora = DateFormat('dd/MM/yyyy HH:mm');
+
+  static final normalDataHora = DateFormat('dd/MM/yyyy HH:mm');
 
   static final normalHoraMinuto2 = DateFormat('Hm');
 }

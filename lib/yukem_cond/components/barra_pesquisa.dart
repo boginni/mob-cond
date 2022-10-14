@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BarraPesquisa extends StatelessWidget {
-  const BarraPesquisa({Key? key}) : super(key: key);
+  const BarraPesquisa({Key? key, this.onPressed}) : super(key: key);
+
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -10,8 +12,7 @@ class BarraPesquisa extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(13),
-            bottomRight: Radius.circular(13)),
+            bottomLeft: Radius.circular(13), bottomRight: Radius.circular(13)),
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
@@ -19,23 +20,35 @@ class BarraPesquisa extends StatelessWidget {
           ),
         ],
       ),
-      child: const TextField(
-        decoration: InputDecoration(
-          icon: Icon(
-            Icons.search,
-            size: 25,
-            color: Colors.black,
+      child: Row(
+        children: [
+          InkWell(
+            onTap: onPressed,
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+              child: Icon(
+                Icons.search,
+                size: 32,
+                color: Colors.black,
+              ),
+            ),
           ),
-          labelText: "PESQUISAR",
-          hintText: "PESQUISAR",
-          labelStyle: TextStyle(
-            color: Colors.black,
-            fontSize: 15,
+          const Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: "PESQUISAR",
+                hintText: "PESQUISAR",
+                labelStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black),
+                ),
+              ),
+            ),
           ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.black),
-          ),
-        ),
+        ],
       ),
     );
   }

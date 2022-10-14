@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:yukem_dashboard/yukem_cond/screens/menu_principal/tela_noticias/moddels/noticia_entity.dart';
 
-import 'moddels/noticia.dart';
 
 class TelaViewNoticia extends StatefulWidget {
   const TelaViewNoticia({Key? key, required this.item}) : super(key: key);
 
-  final Noticia item;
+  final NoticiaEntity item;
 
   @override
   State<TelaViewNoticia> createState() => _TelaViewNoticiaState();
@@ -22,7 +22,7 @@ class _TelaViewNoticiaState extends State<TelaViewNoticia> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(widget.item.imageUrl),
+            // Image.network(widget.item.imageUrl),
             Container(
               padding: const EdgeInsets.all(15),
               child: Column(

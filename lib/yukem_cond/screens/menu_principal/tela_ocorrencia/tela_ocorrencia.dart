@@ -52,7 +52,7 @@ class _TelaOcorrenciasState extends State<TelaOcorrencias> {
           ],
         ),
       ),
-       bottomNavigationBar: TextButton(
+      bottomNavigationBar: TextButton(
         onPressed: () {
           Application.navigate(context, const TelaNovaOcorrencia());
         },
